@@ -24,12 +24,13 @@ IGUAL       	= "=="
 DIFERENTE     	= "!="
 MAYOR      	= ">"
 MENOR       	= "<"
-MAYORIGUAL      	= ">="
-MENORIGUAL       	= "<="
+MAYORIGUAL      = ">="
+MENORIGUAL      = "<="
 OR       	= "||"
 NOT       	= "!="
 AND      	= "&&"
 DIV             = "/"
+MULT            = "*"
 POT             = "^"
 PAR_IZQ         = "("
 PAR_DER         = ")"
@@ -48,10 +49,10 @@ ENTER   = [\ \n]
 <YYINITIAL> {DECIMAL}       { return new Symbol(sym.DECIMAL, yyline, yycolumn, yytext()); }
 <YYINITIAL> {MAS}           { return new Symbol(sym.MAS, yyline, yycolumn, null); }
 <YYINITIAL> {MENOS}	    { return new Symbol(sym.MENOS, yyline, yycolumn, null); }
-<YYINITIAL> {IGUAL}           { return new Symbol(sym.IGUAL, yyline, yycolumn, null); }
+<YYINITIAL> {IGUAL}         { return new Symbol(sym.IGUAL, yyline, yycolumn, null); }
 <YYINITIAL> {DIFERENTE}	    { return new Symbol(sym.DIFERENTE, yyline, yycolumn, null); }
-<YYINITIAL> {MAYOR}           { return new Symbol(sym.MAYOR, yyline, yycolumn, null); }
-<YYINITIAL> {MENORIGUAL}	 { return new Symbol(sym.MENORIGUAL}, yyline, yycolumn, null); }
+<YYINITIAL> {MAYOR}         { return new Symbol(sym.MAYOR, yyline, yycolumn, null); }
+<YYINITIAL> {MENORIGUAL}    { return new Symbol(sym.MENORIGUAL, yyline, yycolumn, null); }
 <YYINITIAL> {MAYORIGUAL}    { return new Symbol(sym.MAYORIGUAL, yyline, yycolumn, null); }
 <YYINITIAL> {MENOR}	    { return new Symbol(sym.MENOR, yyline, yycolumn, null); }
 <YYINITIAL> {OR}	    { return new Symbol(sym.OR, yyline, yycolumn, null); }
